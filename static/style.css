@@ -1,0 +1,78 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+body {
+    background-image: url(./pexels-chanita-sykes-417447-1094544.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    background-color: black;
+    opacity: 0.7;
+    z-index: -1;
+    inset: 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content {
+    padding: 1rem;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 1.8rem;
+}
+
+.input {
+    padding-top: 0.5rem;
+}
+
+.input input {
+    padding: 0.5rem;
+    width: 25rem;
+    margin: 0.5rem;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background: none;
+    color: white;
+}
+
+.form-button {
+    flex-direction: row;
+}
+
+.btn {
+    border: 1px solid gray;
+    margin: 0.5rem;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+    background: none;
+    border-radius: 7px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn:focus {
+    background-color: rgba(128, 128, 128, 0.274);
+}
+
+.output {
+    padding-top: 2rem;
+    font-size: 0.8rem;
+}

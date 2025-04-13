@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Crop Prediction</title>
+</head>
+<body>
+    <div class="content flex">
+        <h1>Crop Prediction System</h1>
+        <form action="{{ url_for('predict') }}" method="post" class="input flex">
+            <input type="text" name="nitrogen" placeholder="Nitrogen" required="required"/>
+            <input type="text" name="phosphorus" placeholder="Phosphorus" required="required"/>
+            <input type="text" name="potassium" placeholder="Potassium" required="required"/>
+            <input type="text" name="temperature" placeholder="Temperature" required="required"/>
+            <input type="text" name="humidity" placeholder="Humidity" required="required"/>
+            <input type="text" name="ph" placeholder="pH" required="required"/>
+            <input type="text" name="rainfall" placeholder="Rainfall" required="required"/>
+            <div class="form-button flex">
+                <button type="submit" class="btn">Predict</button>
+                <button type="reset" class="btn">Reset</button>
+            </div>
+        </form>
+    </div>
+    <div class="output flex">
+        <h1>{{ prediction_text }}</h1>
+    </div>
+</body>
+</html>
